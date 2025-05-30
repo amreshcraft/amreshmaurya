@@ -1,3 +1,16 @@
-<div class="min-h-94vh">
-  <h1>Hello Hero </h1>
+<script>
+	import Button from "../components/Button.svelte";
+	import ThemeSwitcher from "../components/ThemeSwitcher.svelte";
+
+</script>
+
+
+<div class="container">
+
+  <main class="app">
+    <ThemeSwitcher/>
+    <Button>
+      Hello
+    </Button>
+  </main>
 </div>

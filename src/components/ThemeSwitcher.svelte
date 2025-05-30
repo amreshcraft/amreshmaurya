@@ -2,7 +2,7 @@
 	import {onMount} from 'svelte'
 	import { Sun,Moon } from 'lucide-svelte';
 	
-	let theme = 'dark-theme'
+	let theme = 'light-theme'
     let isDarkTheme = true;
 
 	onMount(function(){

@@ -11,5 +11,4 @@
     <a href="/skills">Skills</a>
     <a href="/projects">Projects</a>
     <ThemeSwitcher/>
-
 </nav>

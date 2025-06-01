@@ -51,7 +51,7 @@
   align-items: center;
   gap: 10px;
   font-size: 18px;
-  background:  rgb(82, 115, 250);
+  /* background:  rgb(82, 115, 250); */
   padding: 10px 20px;
   border-radius: 12px;
   backdrop-filter: blur(8px);

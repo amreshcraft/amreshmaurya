@@ -20,8 +20,11 @@
 }
 /* Base Styles for All */
 body {
+  min-height: 100vw;
+  min-height: 100vh;
   margin: 0;
-  padding: 5px;
+  padding: 25px;
+
   scroll-behavior: smooth;
 
 font-family: 'Inter', sans-serif;

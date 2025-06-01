@@ -2,18 +2,21 @@ import { useEffect } from 'react';
 import { useThemeStore } from '../store/themeStore';
 
 const ThemeProvider = () => {
-  const { themeStatus, toggleThemeMode } = useThemeStore();
+  const { themeStatus } = useThemeStore();
+
+ 
 
   useEffect(() => {
-          toggleThemeMode();
+    if(themeStatus.isDarkTheme){
+
+      document.documentElement.classList.remove('dark', 'light');
+      document.documentElement.classList.add(themeStatus.themeValue);
+    }else{
+           document.documentElement.classList.remove('dark', 'light');
+           document.documentElement.classList.add(themeStatus.themeValue);
+    
     }
-  , [])
-
-  useEffect(() => {
-    // 2. Apply theme class to <html>
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(themeStatus.themeValue);
-  }, [themeStatus.themeValue]);
+  }, [themeStatus]);
 
   return null;
 };

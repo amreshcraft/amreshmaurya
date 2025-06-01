@@ -5,27 +5,32 @@ export const ProgrammingLanguagesArrayList = [
     name: "Java",
     image_url: "/skills/java.webp",
   },
-  {
-    id: "golang",
-    name: "Go",
-    image_url: "/skills/go.png",
-  },
+  // {
+  //   id: "golang",
+  //   name: "Go",
+  //   image_url: "/skills/go.png",
+  // },
 
   {
     id: "js",
     name: "Javascript",
     image_url: "/skills/js.png",
-  },
+  },{
+     id: "py",
+    name: "Python",
+    image_url: "/skills/python.png",
+
+  }
 
 
 ];
 
 export const FrontendTechnologiesArrayList = [
-  {
-    id: "techidnextjs",
-    name: "Nextjs",
-    image_url: "/skills/nextjs.png",
-  },
+  // {
+  //   id: "techidnextjs",
+  //   name: "Nextjs",
+  //   image_url: "/skills/nextjs.png",
+  // },
   {
     id: "reactid",
     name: "React",
@@ -55,11 +60,11 @@ export const BackendTechnologiesArrayList = [
     name: "SpringBoot",
     image_url: "/skills/springboot.png",
   },
-  {
-    id: "gin-gonic",
-    name: "Gin-Gonic",
-    image_url: "/skills/gin.png",
-  },
+  // {
+  //   id: "gin-gonic",
+  //   name: "Gin-Gonic",
+  //   image_url: "/skills/gin.png",
+  // },
 
   {
     id: "nodejs",
@@ -141,11 +146,11 @@ export const DatabaseArrayList = [
     name: "MySQL",
     image_url: "/skills/mysql.svg",
   },
-  {
-    id: "db2-sql",
-    name: "Postgres",
-    image_url: "/skills/postgre.png",
-  },
+  // {
+  //   id: "db2-sql",
+  //   name: "Postgres",
+  //   image_url: "/skills/postgre.png",
+  // },
   {
     id: "db-nosql",
     name: "MongoDB",

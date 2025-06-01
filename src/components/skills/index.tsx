@@ -3,8 +3,8 @@ import React from "react";
 // Import your data arrays
 import {
   ProgrammingLanguagesArrayList,
-  FrontendTechnologiesArrayList,
   BackendTechnologiesArrayList,
+  FrontendTechnologiesArrayList,
   DatabaseArrayList,
   OtherSkillsArrayList,
 } from "../../data/SkillsContent"; // Adjust path based on your folder
@@ -44,8 +44,8 @@ const SkillsSection = () => {
   return (
     <div className="skill__group__list">
       <SkillGroup title="Programming Languages" items={ProgrammingLanguagesArrayList} />
-      <SkillGroup title="Frontend Technologies" items={FrontendTechnologiesArrayList} />
       <SkillGroup title="Backend Technologies" items={BackendTechnologiesArrayList} />
+      <SkillGroup title="Frontend Technologies" items={FrontendTechnologiesArrayList} />
       <SkillGroup title="Databases" items={DatabaseArrayList} />
       <SkillGroup title="Tools & Other Skills" items={OtherSkillsArrayList} />
     </div>

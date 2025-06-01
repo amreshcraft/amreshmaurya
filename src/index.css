@@ -22,11 +22,13 @@
 body {
   margin: 0;
   padding: 5px;
+  scroll-behavior: smooth;
 
 font-family: 'Inter', sans-serif;
-  background:url("/bghd.jpg");
+  background:url("/bg.jpg");
   background-size: cover;
   min-height: 100vh;
+  width: 100vw;
   background-repeat:no-repeat ;
   background-position: center;
 }
@@ -43,6 +45,15 @@ font-family: 'Inter', sans-serif;
   color: var(--text-dark-primary);
 }
 
+.dark  {
+  background: rgba(0, 0, 0, 0.15);
+  color: #f0f0f0;
+}
+
+.light {
+  background: rgba(255, 255, 255, 0.15);
+  color: #1e1e1e;
+}
 
 
 

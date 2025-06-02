@@ -35,12 +35,14 @@ export default function CodingProfiles() {
             <div className="coding-content">
               <span className="platform-name">HackerRank</span>
               <span className="platform-stats stars">
-                4 Star&nbsp;
+                5 Star&nbsp;
                 <FaStar className="star-icon filled" />
                 <FaStar className="star-icon filled" />
                 <FaStar className="star-icon filled" />
                 <FaStar className="star-icon filled" />
-                <FaStar className="star-icon empty" />
+                <FaStar className="star-icon filled" />
+                {/* <FaStar className="star-icon empty" /> */}
+
               </span>
             </div>
           </a>

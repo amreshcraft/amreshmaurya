@@ -5,11 +5,11 @@ export const ProgrammingLanguagesArrayList = [
     name: "Java",
     image_url: "/skills/java.webp",
   },
-  // {
-  //   id: "golang",
-  //   name: "Go",
-  //   image_url: "/skills/go.png",
-  // },
+  {
+    id: "golang",
+    name: "Go",
+    image_url: "/skills/go.png",
+  },
 
   {
     id: "js",
@@ -60,11 +60,11 @@ export const BackendTechnologiesArrayList = [
     name: "SpringBoot",
     image_url: "/skills/springboot.png",
   },
-  // {
-  //   id: "gin-gonic",
-  //   name: "Gin-Gonic",
-  //   image_url: "/skills/gin.png",
-  // },
+  {
+    id: "gin-gonic",
+    name: "Gin-Gonic",
+    image_url: "/skills/gin.png",
+  },
 
   {
     id: "nodejs",

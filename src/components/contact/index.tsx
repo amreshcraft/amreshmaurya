@@ -29,7 +29,7 @@ export default function Contact() {
           <li>
             <FaGithub className="contact__icon" />
             <a
-              href="https://github.com/codewithamresh"
+              href="https://github.com/amreshcraft"
               target="_blank"
               rel="noopener noreferrer"
             >

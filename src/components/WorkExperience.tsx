@@ -1,53 +1,140 @@
-
-
-const experiences = [
-  {
-    role: "Consultant Software Developer",
-    company: "Trigya Innovations",
-    period: "Nov 2025 - Feb 2026",
-    responsibilities: [
-      "Worked as a Software Developer Consultant on backend development and application features.",
-      "Developed and maintained backend services using Node.js and REST APIs.",
-      "Collaborated with the team to implement, test, and troubleshoot application functionality.",
-      "Worked with existing codebases and contributed to improving application performance and reliability."
-    ]
-  },
-
-  
-];
+import experiences from "../data/experiences";
 
 export const WorkExperience = () => {
   return (
-    <section className="max-w-4xl mx-auto p-6 font-sans">
-      <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-8">
-        Work Experience
-      </h2>
+    <section
+      id="experience"
+      className="w-full bg-neutral-950 px-6 py-24 text-white sm:px-8 lg:px-10"
+    >
+      <div className="mx-auto max-w-7xl">
 
-      <div className="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 space-y-10">
-        {experiences.map((exp, idx) => (
-          <div key={idx} className="relative pl-8">
-            {/* Timeline Dot */}
-            <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-900 dark:bg-white rounded-full border-4 border-white dark:border-slate-900" />
-            
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              {exp.role} <span className="text-purple-600 font-semibold">@ {exp.company}</span>
-            </h3>
-            
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 mb-4">
-              {exp.period}
+        {/* Section Header */}
+        <div className="mb-16">
+          <p className="text-sm font-medium text-white/40">
+            Experience
+          </p>
+
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <h2 className="max-w-3xl text-4xl font-normal tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+              Where I’ve
+              <br />
+              <span className="text-white/45">worked & contributed</span>
+            </h2>
+
+            <p className="max-w-md text-sm leading-7 text-white/45 lg:pb-1">
+              A look at the roles, responsibilities, and technical work that
+              shaped my experience across software and education.
             </p>
-
-            <p className="font-semibold text-slate-800 dark:text-slate-200 text-sm mb-2">
-              Key Responsibilities:
-            </p>
-
-            <ul className="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-              {exp.responsibilities.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
           </div>
-        ))}
+        </div>
+
+        {/* Experience List */}
+        <div className="border-t border-white/10">
+          {experiences.map((exp, index) => (
+            <article
+              key={exp.id ?? index}
+              className="
+                group
+                border-b
+                border-white/10
+                py-10
+                transition-colors
+                hover:bg-white/[0.02]
+                sm:py-12
+              "
+            >
+              <div className="grid gap-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-12">
+
+                {/* Period */}
+                <div className="flex items-start justify-between lg:block">
+                  <div>
+                    <span className="text-xs font-medium uppercase tracking-[0.16em] text-white/30">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <p className="mt-3 text-sm leading-6 text-white/40">
+                      {exp.period}
+                    </p>
+                  </div>
+
+                  {/* Mobile accent */}
+                  <span
+                    className="
+                      mt-1
+                      h-2
+                      w-2
+                      shrink-0
+                      rounded-full
+                      bg-blue-500
+                      opacity-50
+                      transition-opacity
+                      group-hover:opacity-100
+                      lg:hidden
+                    "
+                  />
+                </div>
+
+                {/* Main Content */}
+                <div>
+                  {/* Role */}
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-4">
+                    <h3
+                      className="
+                        text-2xl
+                        font-medium
+                        tracking-[-0.025em]
+                        text-white
+                        transition-colors
+                        group-hover:text-blue-400
+                        sm:text-3xl
+                      "
+                    >
+                      {exp.role}
+                    </h3>
+
+                    <span className="text-sm text-blue-400">
+                      {exp.company}
+                    </span>
+                  </div>
+
+                  {/* Accent line */}
+                  <div className="mt-6 h-px w-10 bg-blue-500/70 transition-all duration-300 group-hover:w-16" />
+
+                  {/* Responsibilities */}
+                  <ul className="mt-7 max-w-3xl space-y-4">
+                    {exp.responsibilities.map((item, i) => (
+                      <li
+                        key={i}
+                        className="
+                          flex
+                          gap-4
+                          text-sm
+                          leading-7
+                          text-white/50
+                          transition-colors
+                          group-hover:text-white/60
+                        "
+                      >
+                        <span
+                          className="
+                            mt-[11px]
+                            h-1
+                            w-1
+                            shrink-0
+                            rounded-full
+                            bg-white/30
+                          "
+                        />
+
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

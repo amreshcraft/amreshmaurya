@@ -1,51 +1,99 @@
-
-
-const educationList = [
-  {
-    degree: "Master of Computer Applications",
-    institution: "MDU, Rohtak",
-    period: "Sep 2022 - May 2024",
-    description: "Completed a comprehensive curriculum in computer science, including courses in data structures, algorithms, software engineering, and artificial intelligence. Worked on several projects, including a web application for managing student organizations and a mobile app for tracking fitness activities."
-  },
-  {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "MDU, Rohtak",
-    period: "Sep 2019 - May 2022",
-    description: "Completed a comprehensive curriculum in computer science, including courses in data structures, algorithms, software engineering, and artificial intelligence. Worked on several projects, including a web application for managing student organizations and a mobile app for tracking fitness activities."
-  }
-];
+import education from "../data/education";
 
 export const Education = () => {
   return (
-    <section className="max-w-4xl mx-auto p-6 font-sans">
-      <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-8">
-        Education
-      </h2>
+    <section
+      id="education"
+      className="w-full bg-neutral-950 px-6 py-24 text-white sm:px-8 lg:px-10"
+    >
+      <div className="mx-auto max-w-7xl">
 
-      <div className="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 space-y-8">
-        {educationList.map((edu, idx) => (
-          <div key={idx} className="relative pl-8">
-            {/* Dot */}
-            <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-slate-900 dark:bg-white rounded-full border-4 border-white dark:border-slate-900" />
-            
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              {edu.degree}
-            </h3>
-            
-            <p className="text-base font-medium text-slate-800 dark:text-slate-200 mt-0.5">
-              {edu.institution}
-            </p>
+        {/* Header */}
+        <div className="mb-16">
+          <p className="text-sm font-medium text-white/40">
+            Education
+          </p>
 
-            <p className="text-sm text-slate-500 dark:text-slate-400 my-2">
-              {edu.period}
-            </p>
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <h2 className="max-w-3xl text-4xl font-normal tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+              Academic
+              <br />
+              <span className="text-white/45">background</span>
+            </h2>
 
-            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed max-w-2xl">
-              {edu.description}
+            <p className="max-w-md text-sm leading-7 text-white/45 lg:pb-1">
+              My academic journey in computer science, technology, and
+              problem-solving.
             </p>
           </div>
-        ))}
+        </div>
+
+        {/* Education List */}
+        <div className="border-t border-white/10">
+          {education.map((edu, index) => (
+            <article
+              key={edu.id ?? index}
+              className="
+                group
+                border-b
+                border-white/10
+                py-10
+                transition-colors
+                hover:bg-white/[0.02]
+                sm:py-12
+              "
+            >
+              <div className="grid gap-8 lg:grid-cols-[180px_minmax(0,1fr)_120px] lg:items-start lg:gap-12">
+
+                {/* Number */}
+                <div>
+                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-white/25">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <p className="mt-3 text-sm text-white/35">
+                    {edu.period}
+                  </p>
+                </div>
+
+                {/* Main Content */}
+                <div>
+                  <h3
+                    className="
+                      text-2xl
+                      font-medium
+                      tracking-[-0.025em]
+                      text-white
+                      transition-colors
+                      group-hover:text-blue-400
+                      sm:text-3xl
+                    "
+                  >
+                    {edu.degree}
+                  </h3>
+
+                  <p className="mt-2 text-sm font-medium text-blue-400">
+                    {edu.institution}
+                  </p>
+
+                  {edu.description && (
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-white/45">
+                      {edu.description}
+                    </p>
+                  )}
+                </div>
+
+                {/* Accent */}
+                <div className="hidden justify-end pt-2 lg:flex">
+                  <span className="h-2 w-2 rounded-full bg-blue-500/60 transition-colors group-hover:bg-blue-400" />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
+
+export default Education;

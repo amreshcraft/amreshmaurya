@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { BsArrowUpRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
@@ -269,7 +267,7 @@ const ProfileHero = () => {
               </a>
 
               <a
-                href={profile.actions.secondary.email}
+                href={profile.actions.secondary.href}
                 className="
                   inline-flex
                   items-center

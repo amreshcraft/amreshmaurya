@@ -1,11 +1,14 @@
 
 export type Theme = "light" | "dark";
-export type ExperienceKind = "teach" | "eng"| "other";
 
 export interface Links {
   github: string;
   site: string;
   email: string;
+  topmate:string;
+  linkedin:string;
+  instagram:string;
+  
 }
 
 export interface Stat {
@@ -15,10 +18,16 @@ export interface Stat {
 
 export interface Experience {
   pill: string;
-  kind: ExperienceKind;
+  kind?: string;
   title: string;
   meta: string;
   points: string[];
+  link?: {
+    href: string;
+    label: string;
+  };
+
+
 }
 
 export interface SkillGroup {
@@ -28,7 +37,8 @@ export interface SkillGroup {
 
 export interface Project {
   title: string;
-  github:string;
+  github: string;
+  image_link?: string;
   href: string;
   desc: string;
   tech: string[];
@@ -36,6 +46,6 @@ export interface Project {
 
 export interface Education {
   degree: string;
-  score:number;
+  score: number;
   school: string;
 }

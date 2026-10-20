@@ -27,6 +27,18 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
   {
+  title: "Python Tutor — Topmate",
+  meta: "Ongoing · 1:1 sessions · Class 12 (CBSE) Computer Science",
+  pill: "Teaching",
+  kind: "mentor",
+  points: [
+    "Teaching Python to 8+ Class 12 students for board exam preparation",
+    "Covering functions, file handling, data structures and SQL connectivity",
+    "Solving past papers and practical-file programs with step-by-step explanations",
+  ],
+  link: { href: "https://topmate.io/amreshpro", label: "Book a session" },
+},
+  {
     pill: "Other Experience",
     kind: "other",
     title: "Customer Executive",
